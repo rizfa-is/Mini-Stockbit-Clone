@@ -16,10 +16,10 @@ abstract class BaseActivity<binding: ViewDataBinding>: AppCompatActivity() {
     abstract fun setupLifeCycleOwner()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setupDarkModeState()
         super.onCreate(savedInstanceState)
         dataBinding= DataBindingUtil.setContentView(this, layout)
         setupLifeCycleOwner()
+        setupDarkModeState()
     }
 
     private fun setupDarkModeState() {

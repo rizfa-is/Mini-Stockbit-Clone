@@ -41,6 +41,7 @@ dependencies {
     implementation globalDependencies.appCompact
     implementation globalDependencies.materialDesign
     implementation globalDependencies.constraintlayout
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     androidTestImplementation globalTestDependencies.jUnit
     androidTestImplementation globalTestDependencies.espresso

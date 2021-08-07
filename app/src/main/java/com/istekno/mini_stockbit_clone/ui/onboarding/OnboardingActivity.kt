@@ -2,9 +2,15 @@ package com.istekno.mini_stockbit_clone.ui.onboarding
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.istekno.mini_stockbit_clone.R
 import com.istekno.mini_stockbit_clone.base.BaseActivity
+import com.istekno.mini_stockbit_clone.base.adapter.BasePagerAdapter
 import com.istekno.mini_stockbit_clone.databinding.ActivityOnboardingBinding
+import com.istekno.mini_stockbit_clone.ui.onboarding.page.FirstOnboardFragment
+import com.istekno.mini_stockbit_clone.ui.onboarding.page.FourthOnboardFragment
+import com.istekno.mini_stockbit_clone.ui.onboarding.page.SecondOnboardFragment
+import com.istekno.mini_stockbit_clone.ui.onboarding.page.ThirdOnboardFragment
 import com.istekno.mini_stockbit_clone.utils.DarkModeState
 
 class OnboardingActivity : BaseActivity<ActivityOnboardingBinding>(), DarkModeState {
@@ -24,11 +30,7 @@ class OnboardingActivity : BaseActivity<ActivityOnboardingBinding>(), DarkModeSt
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setupView()
-    }
-
-    private fun setupView() {
-        dataBinding.tvMyText.text = "This is Stockbit"
+        setupPagerAdapter()
     }
 
     override fun onLightMode() {
@@ -36,6 +38,31 @@ class OnboardingActivity : BaseActivity<ActivityOnboardingBinding>(), DarkModeSt
     }
 
     override fun onDarkMode() {
+        setupViewOnDarkMode()
+
         Toast.makeText(this, "This is Dark Mode", Toast.LENGTH_LONG).show()
+    }
+
+    private fun setupPagerAdapter() {
+        val titles = arrayListOf("1", "2", "3", "4")
+        val fragments = arrayListOf(
+            FirstOnboardFragment(),
+            SecondOnboardFragment(),
+            ThirdOnboardFragment(),
+            FourthOnboardFragment()
+        )
+
+        val adapter = BasePagerAdapter(supportFragmentManager).apply {
+            setTitles(titles)
+            setFragments(fragments)
+        }
+
+        dataBinding.vpOnboarding.adapter = adapter
+    }
+
+    private fun setupViewOnDarkMode() {
+        dataBinding.apply {
+            imgIcHeader.setImageResource(R.drawable.ic_new_dark)
+        }
     }
 }

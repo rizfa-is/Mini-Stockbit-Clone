@@ -11,6 +11,7 @@
         android:theme="@style/Theme.MiniStockbitClone">
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
+            android:theme="@style/Theme.MiniStockbitClone.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".ui.splash.SplashScreenActivity"
