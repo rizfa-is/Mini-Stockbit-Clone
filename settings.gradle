@@ -8,3 +8,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Mini-Stockbit-Clone"
 include ':app'
+include ':features'
+include ':features:splash'
+include ':features:onboarding'
+include ':core'
+include ':libraries'
+include ':libraries:utils'
+include ':core:base'
