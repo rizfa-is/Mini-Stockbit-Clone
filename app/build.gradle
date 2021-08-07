@@ -37,6 +37,9 @@ android {
 
 dependencies {
 
+    implementation project(path: submodulesFeatures.splash)
+    implementation project(path: submodulesFeatures.onboarding)
+
     implementation globalDependencies.kotlinCoreKTX
     implementation globalDependencies.appCompact
     implementation globalDependencies.materialDesign
