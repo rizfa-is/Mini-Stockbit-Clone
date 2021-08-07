@@ -3,6 +3,8 @@
     package="com.istekno.features.splash">
 
     <application>
+        <activity android:name="com.istekno.features.onboarding.OnboardingActivity"
+            android:theme="@style/Theme.MiniStockbitClone.NoActionBar"/>
         <activity android:name="com.istekno.features.splash.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -9,7 +9,7 @@
         <item name="elevation">0dp</item>
         <item name="cornerFamily">rounded</item>
         <item name="cornerRadius">@dimen/margin_16</item>
-        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="fontFamily">@font/raleway_bold</item>
     </style>
 
     <style name="MaterialField_TextInputLayout">
@@ -32,7 +32,7 @@
     <style name="Onboard_Title">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="fontFamily">@font/raleway_bold</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_marginBottom">@dimen/margin_16</item>
         <item name="android:textSize">@dimen/text_20</item>
@@ -41,7 +41,7 @@
     <style name="Onboard_Subtitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="fontFamily">@font/raleway_regular</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_15</item>
         <item name="android:textColor">@color/subtitle</item>

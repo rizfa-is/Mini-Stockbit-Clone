@@ -6,14 +6,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingVertical="@dimen/margin_30"
+        android:paddingVertical="@dimen/margin_40"
         tools:context=".ui.onboarding.page.FirstOnboardFragment">
 
         <ImageView
             android:id="@+id/iv_onboard1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_new_light"
+            android:src="@drawable/img_onboard1"
             app:layout_constraintBottom_toTopOf="@+id/tv_title_onboard1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

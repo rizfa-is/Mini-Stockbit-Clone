@@ -34,6 +34,7 @@ android {
 dependencies {
 
     implementation project(path: submodulesCore.base)
+    implementation project(path: submodulesFeatures.onboarding)
 
     implementation globalDependencies.kotlinCoreKTX
     implementation globalDependencies.appCompact
