@@ -1,11 +1,9 @@
 package com.istekno.features.register
 
-import android.net.Uri
 import androidx.navigation.fragment.findNavController
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.register.databinding.FragmentRegisterBinding
 import com.istekno.libraries.utils.interfaces.OnFragmentBackPressed
-import com.istekno.libraries.utils.navigator.NavUtils.navigateUriWithDefaultOptions
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBackPressed {
 
