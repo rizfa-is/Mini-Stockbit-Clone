@@ -37,13 +37,16 @@ android {
 
 dependencies {
 
-    implementation project(path: submodulesFeatures.splash)
-    implementation project(path: submodulesFeatures.onboarding)
+    implementation project(path: submodulesFeatures.navigator)
+    implementation project(path: submodulesCore.base)
 
     implementation globalDependencies.kotlinCoreKTX
     implementation globalDependencies.appCompact
     implementation globalDependencies.materialDesign
     implementation globalDependencies.constraintlayout
+
+    implementation globalDependencies.navigationFragment
+    implementation globalDependencies.navigationFragmentUI
 
     androidTestImplementation globalTestDependencies.jUnit
     androidTestImplementation globalTestDependencies.espresso

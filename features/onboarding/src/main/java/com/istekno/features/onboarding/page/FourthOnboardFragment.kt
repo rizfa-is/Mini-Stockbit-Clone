@@ -3,8 +3,8 @@ package com.istekno.features.onboarding.page
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.onboarding.R
 import com.istekno.features.onboarding.databinding.FragmentFourthOnboardBinding
-import com.istekno.libraries.utils.Alert.LogD
-import com.istekno.libraries.utils.DarkModeState
+import com.istekno.libraries.utils.extensions.Alert.LogD
+import com.istekno.libraries.utils.interfaces.DarkModeState
 
 class FourthOnboardFragment : BaseFragment<FragmentFourthOnboardBinding>(), DarkModeState {
 

@@ -38,12 +38,15 @@ android {
 dependencies {
 
     implementation project(path: submodulesCore.base)
-    implementation project(path: submodulesLibraries.utils)
+    implementation project(path: submodulesCore.utils)
 
     implementation globalDependencies.kotlinCoreKTX
     implementation globalDependencies.appCompact
     implementation globalDependencies.materialDesign
     implementation globalDependencies.constraintlayout
+
+    implementation globalDependencies.navigationFragment
+    implementation globalDependencies.navigationFragmentUI
 
     androidTestImplementation globalTestDependencies.jUnit
     androidTestImplementation globalTestDependencies.espresso

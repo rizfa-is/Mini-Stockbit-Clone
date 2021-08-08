@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.istekno.libraries.utils.DarkModeState
+import com.istekno.libraries.utils.interfaces.DarkModeState
 
 abstract class BaseActivity<binding: ViewDataBinding>: AppCompatActivity() {
 
