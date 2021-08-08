@@ -37,12 +37,11 @@ android {
 
 dependencies {
 
-    implementation project(path: submodulesLibraries.utils)
-
     implementation globalDependencies.kotlinCoreKTX
     implementation globalDependencies.appCompact
     implementation globalDependencies.materialDesign
     implementation globalDependencies.constraintlayout
+    implementation project(path: ':core:utils')
 
     androidTestImplementation globalTestDependencies.jUnit
     androidTestImplementation globalTestDependencies.espresso

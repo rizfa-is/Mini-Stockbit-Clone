@@ -5,17 +5,31 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.istekno.libraries.utils.interfaces.DarkModeState
+import com.istekno.libraries.utils.interfaces.OnFragmentBackPressed
 
 abstract class BaseFragment<binding: ViewDataBinding>: Fragment() {
 
     abstract val layout: Int
-    open val darkModeState: com.istekno.libraries.utils.DarkModeState? = null
+    abstract fun setupLifeCycleOwner()
+    open val darkModeState: DarkModeState? = null
+    open val onFragmentBackPressed: OnFragmentBackPressed? = null
+
     lateinit var dataBinding: binding
 
-    abstract fun setupLifeCycleOwner()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        if (activity != null) {
+            activity?.onBackPressedDispatcher?.addCallback(object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() { onFragmentBackPressed?.onBackPressed() }
+            })
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -35,16 +35,19 @@ ext {
     // Compiles - Application
     //==============================================================================================
     submodulesLibraries = [
-            utils                           : ':libraries:utils',
+            dialog                           : ':libraries:dialog',
     ]
 
     submodulesFeatures = [
             splash                          : ':features:splash',
             onboarding                      : ':features:onboarding',
+            register                        : ':features:register',
+            navigator                       : ':features:navigator',
     ]
 
     submodulesCore = [
             base                            : ':core:base',
+            utils                           : ':core:utils',
     ]
 
     globalDependencies = [
@@ -70,7 +73,7 @@ ext {
             lifeCycleViewModel              : "androidx.lifecycle:lifecycle-viewmodel-ktx:$AC_LIFECYCLE",
             lifeCycleLiveData               : "androidx.lifecycle:lifecycle-livedata-ktx:$AC_LIFECYCLE",
             navigationFragment              : "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION",
-            navigationFragmentUi            : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
+            navigationFragmentUI            : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
 
             // Koin
             koin                            : "org.koin:koin-android:$KOIN",
