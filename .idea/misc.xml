@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/drawable/img_splash_dark.xml" value="0.2942708333333333" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/drawable/img_splash_light.xml" value="0.2942708333333333" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/activity_navigator.xml" value="0.22735507246376813" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/activity_onboarding.xml" value="0.25" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/activity_splash_screen.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/fragment_first_onboard.xml" value="0.2703804347826087" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/fragment_fourth_onboard.xml" value="0.2703804347826087" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/fragment_second_onboard.xml" value="0.2703804347826087" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/layout/fragment_third_onboard.xml" value="0.2703804347826087" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2942708333333333" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/app/src/main/res/mipmap-anydpi-v26/ic_stockbit_round.xml" value="0.2942708333333333" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/navigator/src/main/res/layout/activity_initial.xml" value="0.2782699322563835" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/navigator/src/main/res/layout/activity_navigator.xml" value="0.23278985507246377" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/activity_onboarding.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/fragment_first_onboard.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/fragment_fourth_onboard.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/fragment_onboarding.xml" value="0.1" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/fragment_second_onboard.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/onboarding/src/main/res/layout/fragment_third_onboard.xml" value="0.278125" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/register/src/main/res/layout/fragment_register.xml" value="0.22192028985507245" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/splash/src/main/res/layout/activity_navigator.xml" value="0.12409420289855072" />
+        <entry key="..\:/MOBILE APP PROJECT/NATIVE-KOTLIN/Mini-Stockbit-Clone/features/splash/src/main/res/layout/fragment_splash.xml" value="0.278125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
