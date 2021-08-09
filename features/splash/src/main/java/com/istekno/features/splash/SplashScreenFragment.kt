@@ -23,19 +23,28 @@ class SplashScreenFragment : BaseFragment<FragmentSplashBinding>(), DarkModeStat
         dataBinding.apply { lifecycleOwner = this@SplashScreenFragment }
     }
 
+    private var isSplashShowed = false
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         endSplash()
     }
 
+    override fun onResume() {
+        endSplash()
+        super.onResume()
+    }
+
     private fun endSplash() {
-        if (activity == null) return
+        if (isSplashShowed) return
 
         activity?.apply {
             delay(1500L, action = {
                 findNavController().navigateUriWithDefaultOptions(
                     Uri.parse("stockbit://onboarding")
                 )
+
+                isSplashShowed = true
             })
         }
     }

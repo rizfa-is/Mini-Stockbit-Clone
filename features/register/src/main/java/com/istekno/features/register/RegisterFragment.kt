@@ -1,5 +1,7 @@
 package com.istekno.features.register
 
+import android.os.Bundle
+import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.register.databinding.FragmentRegisterBinding
@@ -25,4 +27,20 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBack
         }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupViewClick()
+    }
+
+    private fun setupViewClick() {
+        dataBinding.apply {
+            btnBack.setOnClickListener { findNavController().popBackStack() }
+            btnGoogle.setOnClickListener {  }
+            btnFacebook.setOnClickListener {  }
+            btnRegisterEmail.setOnClickListener {  }
+            btnConsultation.setOnClickListener {  }
+            tvMasuk.setOnClickListener {  }
+        }
+    }
 }

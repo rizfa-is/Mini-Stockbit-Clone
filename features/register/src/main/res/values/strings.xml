@@ -2,4 +2,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="daftar">Daftar</string>
+    <string name="disclaimer">Dengan mendaftar, Anda telah menyetujui <font color='#00BA4F'>aturan peggunaan</font> dan <font color='#00BA4F'>kebijakan privasi</font> Stockbit</string>
 </resources>
