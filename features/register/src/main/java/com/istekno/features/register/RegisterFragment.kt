@@ -36,11 +36,15 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBack
 
     private fun setupViewClick() {
         dataBinding.apply {
-            btnBack.setOnClickListener { findNavController().popBackStack() }
+            btnBack.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
+                Uri.parse("${BASE_DEEPLINK}/onboarding")
+            ) }
+
             btnGoogle.setOnClickListener {  }
             btnFacebook.setOnClickListener {  }
             btnRegisterEmail.setOnClickListener {  }
             btnConsultation.setOnClickListener {  }
+
             tvMasuk.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
                 Uri.parse("${BASE_DEEPLINK}/login")
             ) }

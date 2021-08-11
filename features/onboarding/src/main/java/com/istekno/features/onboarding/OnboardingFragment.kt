@@ -78,6 +78,12 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>(), DarkModeSt
                     Uri.parse("${BASE_DEEPLINK}/register")
                 )
             }
+
+            btnLogin.setOnClickListener {
+                findNavController().navigateUriWithDefaultOptions(
+                    Uri.parse("${BASE_DEEPLINK}/login")
+                )
+            }
         }
     }
 
