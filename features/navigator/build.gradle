@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    implementation project(path: submodulesFeatures.login)
     implementation project(path: submodulesFeatures.register)
     implementation project(path: submodulesFeatures.splash)
     implementation project(path: submodulesFeatures.onboarding)
