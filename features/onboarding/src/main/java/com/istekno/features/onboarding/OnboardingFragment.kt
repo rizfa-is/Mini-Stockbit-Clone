@@ -12,6 +12,7 @@ import com.istekno.features.onboarding.page.FirstOnboardFragment
 import com.istekno.features.onboarding.page.FourthOnboardFragment
 import com.istekno.features.onboarding.page.SecondOnboardFragment
 import com.istekno.features.onboarding.page.ThirdOnboardFragment
+import com.istekno.libraries.utils.Constant.BASE_DEEPLINK
 import com.istekno.libraries.utils.extensions.Alert.LogD
 import com.istekno.libraries.utils.interfaces.DarkModeState
 import com.istekno.libraries.utils.interfaces.OnFragmentBackPressed
@@ -23,9 +24,7 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>(), DarkModeSt
         get() = R.layout.fragment_onboarding
 
     override fun setupLifeCycleOwner() {
-        dataBinding.apply {
-            lifecycleOwner = this@OnboardingFragment
-        }
+        dataBinding.lifecycleOwner = this
     }
 
     override val darkModeState: DarkModeState
@@ -76,7 +75,13 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>(), DarkModeSt
         dataBinding.apply {
             btnRegister.setOnClickListener {
                 findNavController().navigateUriWithDefaultOptions(
-                    Uri.parse("stockbit://register")
+                    Uri.parse("${BASE_DEEPLINK}/register")
+                )
+            }
+
+            btnLogin.setOnClickListener {
+                findNavController().navigateUriWithDefaultOptions(
+                    Uri.parse("${BASE_DEEPLINK}/login")
                 )
             }
         }

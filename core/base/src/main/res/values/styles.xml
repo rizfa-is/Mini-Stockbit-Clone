@@ -16,17 +16,15 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:textColorHint">@android:color/darker_gray</item>
-        <item name="boxCornerRadiusTopStart">10dp</item>
-        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="hintTextColor">@color/subtitle</item>
     </style>
 
-    <style name="MaterialField_TextInputLayout_Edit" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+    <style name="MaterialField_EditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:textColorHint">@android:color/darker_gray</item>
-        <item name="boxStrokeColor">@color/theme_green</item>
+        <item name="fontFamily">@font/raleway_regular</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="backgroundTint">@android:color/transparent</item>
     </style>
 
     <style name="Onboard_Title">

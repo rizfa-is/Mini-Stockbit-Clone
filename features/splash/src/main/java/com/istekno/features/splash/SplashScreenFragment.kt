@@ -4,6 +4,7 @@ import android.net.Uri
 import androidx.navigation.fragment.findNavController
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.splash.databinding.FragmentSplashBinding
+import com.istekno.libraries.utils.Constant.BASE_DEEPLINK
 import com.istekno.libraries.utils.extensions.Alert.LogD
 import com.istekno.libraries.utils.extensions.Delay.delay
 import com.istekno.libraries.utils.interfaces.DarkModeState
@@ -14,11 +15,11 @@ class SplashScreenFragment : BaseFragment<FragmentSplashBinding>(), DarkModeStat
     override val layout: Int
         get() = R.layout.fragment_splash
 
-    override val darkModeState: DarkModeState?
+    override val darkModeState: DarkModeState
         get() = this
 
     override fun setupLifeCycleOwner() {
-        dataBinding.apply { lifecycleOwner = this@SplashScreenFragment }
+        dataBinding.lifecycleOwner = this
     }
 
     override fun onResume() {
@@ -30,7 +31,7 @@ class SplashScreenFragment : BaseFragment<FragmentSplashBinding>(), DarkModeStat
         activity?.apply {
             delay(1500L, action = {
                 findNavController().navigateUriWithDefaultOptions(
-                    Uri.parse("stockbit://onboarding")
+                    Uri.parse("${BASE_DEEPLINK}/onboarding")
                 )
             })
         }

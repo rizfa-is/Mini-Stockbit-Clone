@@ -1,11 +1,14 @@
 package com.istekno.features.register
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.register.databinding.FragmentRegisterBinding
+import com.istekno.libraries.utils.Constant.BASE_DEEPLINK
 import com.istekno.libraries.utils.interfaces.OnFragmentBackPressed
+import com.istekno.libraries.utils.navigator.NavUtils.navigateUriWithDefaultOptions
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBackPressed {
 
@@ -13,12 +16,10 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBack
         get() = R.layout.fragment_register
 
     override fun setupLifeCycleOwner() {
-        dataBinding.apply {
-            lifecycleOwner = this@RegisterFragment
-        }
+        dataBinding.lifecycleOwner = this
     }
 
-    override val onFragmentBackPressed: OnFragmentBackPressed?
+    override val onFragmentBackPressed: OnFragmentBackPressed
         get() = this
 
     override fun onBackPressed() {
@@ -35,12 +36,18 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBack
 
     private fun setupViewClick() {
         dataBinding.apply {
-            btnBack.setOnClickListener { findNavController().popBackStack() }
+            btnBack.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
+                Uri.parse("${BASE_DEEPLINK}/onboarding")
+            ) }
+
             btnGoogle.setOnClickListener {  }
             btnFacebook.setOnClickListener {  }
             btnRegisterEmail.setOnClickListener {  }
             btnConsultation.setOnClickListener {  }
-            tvMasuk.setOnClickListener {  }
+
+            tvMasuk.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
+                Uri.parse("${BASE_DEEPLINK}/login")
+            ) }
         }
     }
 }

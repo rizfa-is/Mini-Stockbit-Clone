@@ -9,6 +9,6 @@ class InitialActivity : BaseActivity<ActivityInitialBinding>() {
         get() = R.layout.activity_initial
 
     override fun setupLifeCycleOwner() {
-        dataBinding.apply { lifecycleOwner = this@InitialActivity }
+        dataBinding.lifecycleOwner = this
     }
 }
