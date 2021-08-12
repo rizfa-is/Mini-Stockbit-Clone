@@ -6,7 +6,6 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.istekno.core.base.BaseFragment
 import com.istekno.features.login.databinding.FragmentLoginBinding
-import com.istekno.libraries.utils.Constant
 import com.istekno.libraries.utils.Constant.BASE_DEEPLINK
 import com.istekno.libraries.utils.extensions.Alert.LogD
 import com.istekno.libraries.utils.interfaces.DarkModeState
@@ -58,6 +57,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(), DarkModeState, OnFra
 
             tvRegister.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
                 Uri.parse("${BASE_DEEPLINK}/register")
+            ) }
+
+            btnLogin.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
+                Uri.parse("${BASE_DEEPLINK}/home")
             ) }
         }
     }

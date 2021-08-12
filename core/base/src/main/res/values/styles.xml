@@ -44,4 +44,20 @@
         <item name="android:textSize">@dimen/text_15</item>
         <item name="android:textColor">@color/subtitle</item>
     </style>
+
+    <style name="Bottom_Navigation" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:actionBarSize</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemTextAppearanceActive">@style/Item_Text_Active</item>
+        <item name="itemTextAppearanceInactive">@style/Item_Text_Inactive</item>
+    </style>
+
+    <style name="Item_Text_Active" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/raleway_medium</item>
+    </style>
+
+    <style name="Item_Text_Inactive" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/raleway_regular</item>
+    </style>
 </resources>

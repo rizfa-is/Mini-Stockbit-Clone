@@ -42,8 +42,11 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), OnFragmentBack
 
             btnGoogle.setOnClickListener {  }
             btnFacebook.setOnClickListener {  }
-            btnRegisterEmail.setOnClickListener {  }
             btnConsultation.setOnClickListener {  }
+
+            btnRegisterEmail.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
+                Uri.parse("${BASE_DEEPLINK}/home")
+            ) }
 
             tvMasuk.setOnClickListener { findNavController().navigateUriWithDefaultOptions(
                 Uri.parse("${BASE_DEEPLINK}/login")

@@ -41,6 +41,7 @@ ext {
     submodulesFeatures = [
             splash                          : ':features:splash',
             onboarding                      : ':features:onboarding',
+            home                            : ':features:home',
             login                           : ':features:login',
             register                        : ':features:register',
             navigator                       : ':features:navigator',

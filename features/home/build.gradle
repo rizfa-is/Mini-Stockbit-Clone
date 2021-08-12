@@ -37,12 +37,6 @@ android {
 
 dependencies {
 
-    implementation project(path: submodulesFeatures.home)
-    implementation project(path: submodulesFeatures.login)
-    implementation project(path: submodulesFeatures.register)
-    implementation project(path: submodulesFeatures.splash)
-    implementation project(path: submodulesFeatures.onboarding)
-
     implementation project(path: submodulesCore.base)
     implementation project(path: submodulesCore.utils)
 
@@ -53,6 +47,7 @@ dependencies {
 
     implementation globalDependencies.navigationFragment
     implementation globalDependencies.navigationFragmentUI
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     androidTestImplementation globalTestDependencies.jUnit
     androidTestImplementation globalTestDependencies.espresso

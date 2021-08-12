@@ -7,5 +7,6 @@
     <include app:graph="@navigation/nav_onboarding" />
     <include app:graph="@navigation/nav_register" />
     <include app:graph="@navigation/nav_login" />
+    <include app:graph="@navigation/nav_home" />
 
 </navigation>
