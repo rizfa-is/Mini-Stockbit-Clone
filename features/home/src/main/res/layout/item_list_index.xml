@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_4">
+
+        <View
+            android:id="@+id/midline_top"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_1"
+            android:background="@color/subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_index_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:textSize="@dimen/text_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="WSKT" />
+
+        <TextView
+            android:id="@+id/tv_index_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:fontFamily="@font/raleway_regular"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_index_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_index_name"
+            tools:text="PT. Waskita Karya Tbk." />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:textSize="@dimen/text_15"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_index_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_index_name"
+            tools:text="9,625" />
+
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:fontFamily="@font/raleway_regular"
+            android:textSize="@dimen/text_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            tools:text="+155(+1,65%)" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

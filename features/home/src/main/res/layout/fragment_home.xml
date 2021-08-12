@@ -40,26 +40,6 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <View
-            android:id="@+id/midline_top"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/margin_1"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/tv_all_watchlist"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
-
-        <View
-            android:id="@+id/midline_bottom"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/margin_1"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/rv_symbol"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_all_watchlist" />
-
         <TextView
             android:id="@+id/tv_all_watchlist"
             android:layout_width="wrap_content"
@@ -72,8 +52,8 @@
             android:fontFamily="@font/raleway_bold"
             android:text="All Watchlist"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/midline_bottom"
-            app:layout_constraintTop_toBottomOf="@+id/midline_top" />
+            app:layout_constraintBottom_toTopOf="@id/swipe_refresh"
+            app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />
 
         <TextView
             android:id="@+id/tv_add_symbol"
@@ -90,14 +70,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_all_watchlist" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_symbol"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/midline_bottom" />
+            app:layout_constraintTop_toBottomOf="@id/tv_all_watchlist"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/margin_4"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
